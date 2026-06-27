@@ -2,8 +2,7 @@
 
 Software Engineer · Embedded Systems · Dark-maroon single-page site.
 
-<!-- Replace <repo> with your repository name once it exists -->
-[![Deploy](https://github.com/fabianhdz/<repo>/actions/workflows/deploy.yml/badge.svg)](https://github.com/fabianhdz/<repo>/actions/workflows/deploy.yml)
+[![Deploy](https://github.com/fabianhdz/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/fabianhdz/portfolio/actions/workflows/deploy.yml)
 ![No build step](https://img.shields.io/badge/build-none-c9a227?style=flat-square)
 ![Vanilla JS](https://img.shields.io/badge/stack-HTML%20·%20CSS%20·%20JS-2e0707?style=flat-square)
 ![GitHub Pages](https://img.shields.io/badge/hosted-GitHub%20Pages-2e0707?style=flat-square)
@@ -26,6 +25,7 @@ Or just double-click `index.html`.
 | Path | What |
 |------|------|
 | `index.html` | All page content / sections |
+| `assets/resume.pdf` | Resume linked from the hero and contact sections |
 | `css/styles.css` | Theme variables, styling, responsive rules |
 | `js/main.js` | Mobile nav, active-section highlight, scroll reveals |
 | `.github/workflows/` | GitHub Pages deploy workflow |
@@ -43,7 +43,7 @@ Everything is placeholder text — search `index.html` and swap in your own:
 | "See more" GitHub link | `.projects__more` |
 | Skills | `#skills` → `.tags--lg` lists |
 | Currently working on | `#now` → `.now__list` items |
-| Email · LinkedIn · GitHub | `#contact` (+ nav GitHub link) |
+| Email · LinkedIn · GitHub · Resume | `#contact` |
 
 **Recolor it:** edit `--gold` / `--gold-soft` (accent) or `--maroon-*` (base) in
 `css/styles.css` `:root`. If you change the maroon, also update the two hex colors in
@@ -55,5 +55,5 @@ the `body` rule's `background-image` SVG so the texture matches.
 2. **Settings → Pages → Source → GitHub Actions**.
 3. Every push to `main` auto-publishes (see the **Actions** tab; or **Run workflow** manually).
 
-Live at `https://fabianhdz.github.io/<repo>/`
+Live at `https://fabianhdz.github.io/portfolio/`
 (or `https://fabianhdz.github.io/` if the repo is named `fabianhdz.github.io`).
