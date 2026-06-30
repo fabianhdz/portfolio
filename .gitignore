@@ -56,3 +56,6 @@ lib/
 # Temporary files
 tmp/
 temp/
+
+# Original project media that is too large to publish
+source-media/
