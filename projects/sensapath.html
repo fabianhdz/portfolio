@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SensaPath | Fabian Hernandez Flores</title>
+  <meta name="description" content="SensaPath is an RP2040-based 360 proximity awareness system with ultrasonic sensing, directional haptics, and spoken distance feedback." />
+  <meta property="og:title" content="SensaPath: 360 Proximity Awareness System" />
+  <meta property="og:description" content="A wearable embedded system designed to improve nearby obstacle awareness for people with visual impairments." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://fabianhz.me/projects/sensapath.html" />
+  <meta property="og:image" content="https://fabianhz.me/assets/projects/sensapath/wearable-prototype.jpg" />
+  <link rel="canonical" href="https://fabianhz.me/projects/sensapath.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232e0707'/><text x='16' y='22' font-size='18' font-family='monospace' fill='%23c9a227' text-anchor='middle'>F</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+</head>
+<body class="project-page">
+  <header class="project-nav">
+    <div class="container project-nav__inner">
+      <a class="project-nav__back" href="../index.html#projects">&larr; Portfolio</a>
+      <a class="btn btn--ghost" href="https://github.com/fabianhdz/360System" target="_blank" rel="noopener">View GitHub</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero" aria-labelledby="project-title">
+      <img class="project-hero__image" src="../assets/projects/sensapath/wearable-prototype.jpg" alt="SensaPath ultrasonic sensor modules arranged around a wearable headpiece" width="524" height="328" />
+      <div class="project-hero__shade" aria-hidden="true"></div>
+      <div class="container project-hero__content">
+        <p class="project-hero__eyebrow">Embedded accessibility system</p>
+        <h1 id="project-title">SensaPath: 360 Proximity Awareness System for the Visually Impaired</h1>
+        <p class="project-hero__summary">
+          A functional wearable prototype that combines five ultrasonic sensing zones,
+          directional vibration feedback, and spoken distance cues around an RP2040 controller.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-section project-section--overview">
+      <div class="container project-intro">
+        <p class="project-section__label">Overview</p>
+        <h2>Directional awareness without relying on vision</h2>
+        <p>
+          SensaPath explores a wearable way to communicate nearby obstacle movement.
+          Five AJ-SR04M ultrasonic modules cover separate directions around the user.
+          Each zone maps to a coin vibration motor, allowing the feedback location to
+          communicate where an obstacle is approaching.
+        </p>
+        <p>
+          The front sensor also drives spoken distance feedback through two compact
+          speakers. The prototype integrates sensing, haptics, audio, battery power,
+          a custom PCB, and printed enclosures into one system.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="container">
+        <div class="system-flow">
+          <section class="system-flow__step">
+            <span class="system-flow__number">01</span>
+            <h3>Sense</h3>
+            <p>Trigger five ultrasonic channels sequentially and capture echo pulse timing with GPIO interrupts.</p>
+          </section>
+          <section class="system-flow__step">
+            <span class="system-flow__number">02</span>
+            <h3>Filter</h3>
+            <p>Validate measurements from 2 to 400 cm and apply a three-sample median filter.</p>
+          </section>
+          <section class="system-flow__step">
+            <span class="system-flow__number">03</span>
+            <h3>Interpret</h3>
+            <p>Compare filtered readings with hysteresis to detect meaningful approaching movement.</p>
+          </section>
+          <section class="system-flow__step">
+            <span class="system-flow__number">04</span>
+            <h3>Signal</h3>
+            <p>Activate the matching vibration zone and announce front distance from one through ten feet.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="container project-split">
+        <div class="project-subsection">
+          <p class="project-section__label">Firmware</p>
+          <h2>Event-driven control on both RP2040 cores</h2>
+          <p>
+            Core 0 manages sensor acquisition, filtering, timeout recovery, and motor policy.
+            Core 1 waits for audio commands and streams stored speech samples through an
+            interrupt-driven PWM output.
+          </p>
+          <ul class="feature-list">
+            <li>Non-blocking trigger, echo, timeout, and cooldown state machine</li>
+            <li>Sequential acquisition to reduce sensor crosstalk</li>
+            <li>Fixed-memory data paths with no dynamic allocation</li>
+            <li>Compile-time UART and USB diagnostic logging</li>
+            <li>Raspberry Pi Pico SDK, CMake, and C11</li>
+          </ul>
+        </div>
+        <div class="project-subsection">
+          <p class="project-section__label">Hardware</p>
+          <h2>Integrated sensing, feedback, and portable power</h2>
+          <ul class="parts-list">
+            <li><strong>Controller</strong>Raspberry Pi Pico / RP2040</li>
+            <li><strong>Sensing</strong>5 AJ-SR04M ultrasonic modules</li>
+            <li><strong>Haptics</strong>5 coin vibration motors, 10 mm x 2 mm</li>
+            <li><strong>Audio</strong>2 Gikfun round micro speakers</li>
+            <li><strong>Power</strong>Lithium battery and TP4056 charger</li>
+            <li><strong>Regulation</strong>5 V DC-DC boost converter</li>
+            <li><strong>Interconnect</strong>Custom two-layer PCB</li>
+            <li><strong>Packaging</strong>Custom printed sensor and electronics mounts</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="container">
+        <header class="project-section__head">
+          <p class="project-section__label">Electronics design</p>
+          <h2>From schematic to assembled prototype</h2>
+          <p class="project-section__intro">
+            The custom board centralizes the Pico, five sensor interfaces, five motor outputs,
+            audio path, charger, and 5 V supply within a compact enclosure footprint.
+          </p>
+        </header>
+        <div class="project-media-grid">
+          <figure class="project-media">
+            <a href="../assets/projects/sensapath/system-schematic.png" target="_blank" rel="noopener">
+              <img src="../assets/projects/sensapath/system-schematic.png" alt="Complete SensaPath electronics schematic" width="1420" height="816" loading="lazy" />
+            </a>
+            <figcaption>System schematic covering sensing, motor, audio, charging, and regulated power.</figcaption>
+          </figure>
+          <figure class="project-media">
+            <a href="../assets/projects/sensapath/pcb-layout.png" target="_blank" rel="noopener">
+              <img src="../assets/projects/sensapath/pcb-layout.png" alt="Two-layer SensaPath PCB layout" width="1004" height="880" loading="lazy" />
+            </a>
+            <figcaption>Two-layer PCB layout with the controller, power modules, and channel interfaces.</figcaption>
+          </figure>
+          <figure class="project-media project-media--portrait">
+            <a href="../assets/projects/sensapath/assembled-pcb.jpg" target="_blank" rel="noopener">
+              <img src="../assets/projects/sensapath/assembled-pcb.jpg" alt="Assembled SensaPath PCB with Raspberry Pi Pico and power modules" width="1536" height="2048" loading="lazy" />
+            </a>
+            <figcaption>Assembled board during full-system integration and functional testing.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="container">
+        <header class="project-section__head">
+          <p class="project-section__label">Mechanical integration</p>
+          <h2>Wearable housings designed around the electronics</h2>
+          <p class="project-section__intro">
+            I collaborated with two mechanical engineering teammates as they designed the
+            printed sensor modules, speaker holder, and main electronics enclosure around
+            wiring, service access, and the wearable arrangement.
+          </p>
+        </header>
+        <div class="project-media-grid project-media-grid--three">
+          <figure class="project-media">
+            <a href="../assets/projects/sensapath/sensor-enclosure-cad.png" target="_blank" rel="noopener">
+              <img src="../assets/projects/sensapath/sensor-enclosure-cad.png" alt="CAD views of a SensaPath ultrasonic sensor enclosure" width="1542" height="412" loading="lazy" />
+            </a>
+            <figcaption>Ultrasonic module enclosure and mounting geometry.</figcaption>
+          </figure>
+          <figure class="project-media">
+            <a href="../assets/projects/sensapath/speaker-holder-cad.png" target="_blank" rel="noopener">
+              <img src="../assets/projects/sensapath/speaker-holder-cad.png" alt="CAD model of the SensaPath speaker holder" width="280" height="450" loading="lazy" />
+            </a>
+            <figcaption>Compact speaker holder for audio feedback near the user.</figcaption>
+          </figure>
+          <figure class="project-media">
+            <a href="../assets/projects/sensapath/electronics-enclosure-cad.png" target="_blank" rel="noopener">
+              <img src="../assets/projects/sensapath/electronics-enclosure-cad.png" alt="CAD views of the SensaPath battery and controller enclosure" width="1516" height="564" loading="lazy" />
+            </a>
+            <figcaption>Main enclosure for the PCB, Pico, battery, charger, and boost converter.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="container">
+        <header class="project-section__head">
+          <p class="project-section__label">Team contributions</p>
+        </header>
+        <div class="contribution-grid">
+          <section>
+            <h3>My work: firmware and electronics</h3>
+            <p>
+              I authored the full embedded codebase and designed the complete electrical
+              system and PCB. I also led electronic integration, bring-up, and functional testing.
+            </p>
+          </section>
+          <section>
+            <h3>Collaborative work: mechanical integration</h3>
+            <p>
+              Two mechanical engineering teammates led the printed-part design, component
+              ordering, fabrication, and soldering support. We collaborated on enclosure and
+              mounting decisions to align the mechanical design with the electronics.
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-cta">
+      <div class="container">
+        <h2>Explore the firmware</h2>
+        <p>Review the C source, pin assignments, firmware architecture, and Pico SDK build instructions on GitHub.</p>
+        <a class="btn btn--primary" href="https://github.com/fabianhdz/360System" target="_blank" rel="noopener">Open 360System on GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>&copy; <span id="year"></span> Fabian Hernandez Flores</span>
+      <a href="../index.html#projects">Back to projects</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

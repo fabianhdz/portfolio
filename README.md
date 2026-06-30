@@ -25,6 +25,8 @@ Or just double-click `index.html`.
 | Path | What |
 |------|------|
 | `index.html` | All page content / sections |
+| `projects/` | Individual project case-study pages |
+| `assets/projects/` | Project photos, diagrams, and design media |
 | `assets/resume.pdf` | Resume linked from the hero and contact sections |
 | `css/styles.css` | Theme variables, styling, responsive rules |
 | `js/main.js` | Mobile nav, active-section highlight, scroll reveals |
@@ -55,5 +57,4 @@ the `body` rule's `background-image` SVG so the texture matches.
 2. **Settings → Pages → Source → GitHub Actions**.
 3. Every push to `main` auto-publishes (see the **Actions** tab; or **Run workflow** manually).
 
-Live at `https://fabianhdz.github.io/portfolio/`
-(or `https://fabianhdz.github.io/` if the repo is named `fabianhdz.github.io`).
+Live at `https://fabianhz.me/`.

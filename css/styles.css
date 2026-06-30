@@ -235,6 +235,7 @@ ul { list-style: none; padding: 0; }
   display: flex;
   flex-direction: column;
   min-height: 230px;
+  overflow: hidden;
 }
 .card--project:hover {
   transform: translateY(-5px);
@@ -247,6 +248,27 @@ ul { list-style: none; padding: 0; }
   justify-content: space-between;
   align-items: center;
   margin-bottom: 18px;
+}
+.card__media {
+  aspect-ratio: 16 / 10;
+  margin: -26px -26px 22px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: var(--maroon-900);
+}
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.card--project:hover .card__media img { transform: scale(1.035); }
+.card__kicker {
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .card__icon { width: 30px; height: 30px; color: var(--gold); }
 .card__arrow {
