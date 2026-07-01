@@ -86,33 +86,6 @@
     </section>
 
     <section class="project-section">
-      <div class="container">
-        <div class="system-flow">
-          <section class="system-flow__step">
-            <span class="system-flow__number">01</span>
-            <h3>Collaborate</h3>
-            <p>Fuse V2X perception from connected vehicles and roadside units into a shared scene representation.</p>
-          </section>
-          <section class="system-flow__step">
-            <span class="system-flow__number">02</span>
-            <h3>Plan</h3>
-            <p>Use the frozen CoDriving planner and nominal PID controller to produce waypoints and desired speed.</p>
-          </section>
-          <section class="system-flow__step">
-            <span class="system-flow__number">03</span>
-            <h3>Adapt</h3>
-            <p>Map an 11-dimensional traffic-risk state to per-class barrier gains using a constrained PPO policy.</p>
-          </section>
-          <section class="system-flow__step">
-            <span class="system-flow__number">04</span>
-            <h3>Enforce</h3>
-            <p>Solve a CBF quadratic program that stays near nominal acceleration while constraining safety risk.</p>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-section">
       <div class="container project-split">
         <div class="project-subsection">
           <p class="project-section__label">Adaptive policy</p>
@@ -213,29 +186,6 @@
             </a>
             <figcaption>The adaptive controller achieved the highest mean and median driving scores.</figcaption>
           </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-section">
-      <div class="container">
-        <header class="project-section__head">
-          <p class="project-section__label">Research boundaries</p>
-          <h2>What the results establish and what remains</h2>
-        </header>
-        <div class="research-notes">
-          <section>
-            <h3>Simulation scope</h3>
-            <p>Results are from CARLA Town05 under nominal collaborative communication, without latency, packet loss, or pose-noise sweeps.</p>
-          </section>
-          <section>
-            <h3>Control scope</h3>
-            <p>The safety adapter modifies longitudinal control only; lateral steering continues through the unchanged PID controller.</p>
-          </section>
-          <section>
-            <h3>Next validation</h3>
-            <p>A connected small-scale vehicle testbed would expose sensing noise, actuation delay, communication dropouts, and calibration error.</p>
-          </section>
         </div>
       </div>
     </section>
