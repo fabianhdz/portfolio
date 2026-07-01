@@ -390,46 +390,6 @@ ul { list-style: none; padding: 0; }
 }
 
 /* ============================================================
-   Currently Working On
-   ============================================================ */
-.now {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
-}
-.now__label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  margin-bottom: 16px;
-}
-.dot {
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  box-shadow: 0 0 12px currentColor;
-}
-.dot--learn { background: var(--gold);   color: var(--gold); }
-.dot--build { background: #5fd0a8;        color: #5fd0a8; }
-.dot--read  { background: #e08a8a;        color: #e08a8a; }
-
-.now__list li {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 12px;
-  color: var(--cream-dim);
-  font-size: 0.98rem;
-}
-.now__list li::before {
-  content: "›";
-  position: absolute;
-  left: 4px;
-  color: var(--gold);
-}
-
-/* ============================================================
    Contact
    ============================================================ */
 .section--contact { padding-bottom: clamp(60px, 9vh, 100px); }
@@ -443,7 +403,10 @@ ul { list-style: none; padding: 0; }
 .contact__link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
+  flex: 0 0 180px;
+  width: 180px;
   max-width: 100%;
   padding: 16px 26px;
   border-radius: var(--radius-sm);
@@ -468,6 +431,7 @@ ul { list-style: none; padding: 0; }
 
 @media (max-width: 520px) {
   .contact__link {
+    flex: 1 1 100%;
     width: 100%;
     justify-content: flex-start;
   }

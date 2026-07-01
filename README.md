@@ -10,7 +10,7 @@ Software Engineer · Embedded Systems · Dark-maroon single-page site.
 A single-page personal portfolio — plain HTML, CSS, and JS. No frameworks, no bundler,
 no build step. Dark maroon theme, subtle triangle texture, gold accent.
 
-**Sections:** About → Experience → Projects → Skills → Now → Contact
+**Sections:** About → Experience → Projects → Skills → Contact
 
 ## 🚀 Quick start
 
@@ -44,7 +44,6 @@ Everything is placeholder text — search `index.html` and swap in your own:
 | Projects (title, copy, tags, repo link) | `#projects` → each `.card--project` `href` |
 | "See more" GitHub link | `.projects__more` |
 | Skills | `#skills` → `.tags--lg` lists |
-| Currently working on | `#now` → `.now__list` items |
 | Email · LinkedIn · GitHub · Resume | `#contact` |
 
 **Recolor it:** edit `--gold` / `--gold-soft` (accent) or `--maroon-*` (base) in
