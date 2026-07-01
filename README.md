@@ -1,6 +1,6 @@
 # Fabian Hernandez Flores — Portfolio
 
-Software Engineer · Embedded Systems · Dark-maroon single-page site.
+Computer Engineer · Embedded Systems · Robotics & AI.
 
 [![Deploy](https://github.com/fabianhdz/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/fabianhdz/portfolio/actions/workflows/deploy.yml)
 ![No build step](https://img.shields.io/badge/build-none-c9a227?style=flat-square)
