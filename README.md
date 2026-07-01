@@ -1,59 +1,39 @@
 # Fabian Hernandez Flores — Portfolio
 
-Computer Engineer · Embedded Systems · Robotics & AI.
+This repository contains my personal portfolio, where I share my experience and
+projects in embedded systems, robotics, and AI.
 
-[![Deploy](https://github.com/fabianhdz/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/fabianhdz/portfolio/actions/workflows/deploy.yml)
-![No build step](https://img.shields.io/badge/build-none-c9a227?style=flat-square)
-![Vanilla JS](https://img.shields.io/badge/stack-HTML%20·%20CSS%20·%20JS-2e0707?style=flat-square)
-![GitHub Pages](https://img.shields.io/badge/hosted-GitHub%20Pages-2e0707?style=flat-square)
 
-A single-page personal portfolio — plain HTML, CSS, and JS. No frameworks, no bundler,
-no build step. Dark maroon theme, subtle triangle texture, gold accent.
+[View the live site](https://fabianhz.me/)
 
-**Sections:** About → Experience → Projects → Skills → Contact
+## About the site
 
-## 🚀 Quick start
+The main page includes my background, work experience, technical skills, and
+contact information. Each featured project also has its own page with more detail,
+including photos, diagrams, technical decisions, and links to the source code.
+
+## Running it locally
+
+Start a local server from the repository root:
 
 ```bash
-python3 -m http.server 8000   # then open http://localhost:8000
+python3 -m http.server 8000
 ```
 
-Or just double-click `index.html`.
+Then open [http://localhost:8000](http://localhost:8000) in a browser.
 
-## 📦 Structure
+## Project structure
 
-| Path | What |
-|------|------|
-| `index.html` | All page content / sections |
-| `projects/` | Individual project case-study pages |
-| `assets/projects/` | Project photos, diagrams, and design media |
-| `assets/resume.pdf` | Resume linked from the hero and contact sections |
-| `css/styles.css` | Theme variables, styling, responsive rules |
-| `js/main.js` | Mobile nav, active-section highlight, scroll reveals |
-| `.github/workflows/` | GitHub Pages deploy workflow |
-| `.nojekyll` | Skip Jekyll on Pages |
+| Path | Contents |
+| --- | --- |
+| `index.html` | Main portfolio page |
+| `projects/` | Individual project pages |
+| `assets/projects/` | Project photos, diagrams, and other media |
+| `assets/resume.pdf` | Resume linked from the site |
+| `css/` | Site and project-page styles |
+| `js/main.js` | Navigation and scroll interactions |
 
-## ✏️ Make it yours
+## Deployment
 
-Everything is placeholder text — search `index.html` and swap in your own:
-
-| What | Where |
-|------|-------|
-| Intro paragraph | `#about` → `.hero__about` |
-| Experience (role, company, dates, bullets, tags) | `#experience` → each `.exp` article |
-| Projects (title, copy, tags, repo link) | `#projects` → each `.card--project` `href` |
-| "See more" GitHub link | `.projects__more` |
-| Skills | `#skills` → `.tags--lg` lists |
-| Email · LinkedIn · GitHub · Resume | `#contact` |
-
-**Recolor it:** edit `--gold` / `--gold-soft` (accent) or `--maroon-*` (base) in
-`css/styles.css` `:root`. If you change the maroon, also update the two hex colors in
-the `body` rule's `background-image` SVG so the texture matches.
-
-## 🌐 Deploy (GitHub Pages)
-
-1. Push to GitHub (`main`).
-2. **Settings → Pages → Source → GitHub Actions**.
-3. Every push to `main` auto-publishes (see the **Actions** tab; or **Run workflow** manually).
-
-Live at `https://fabianhz.me/`.
+The site is hosted with GitHub Pages and deployed automatically from `main` using
+GitHub Actions.
