@@ -133,12 +133,9 @@ ul { list-style: none; padding: 0; }
 .hero__avatar {
   width: clamp(120px, 18vw, 168px);
   height: clamp(120px, 18vw, 168px);
-  display: grid; place-items: center;
+  object-fit: cover;
+  object-position: center 24%;
   border-radius: 50%;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(2.4rem, 5vw, 3.2rem);
-  color: var(--gold-soft);
   background: radial-gradient(circle at 30% 30%, var(--maroon-500), var(--maroon-800));
   border: 1px solid var(--line-strong);
   margin-bottom: 28px;
