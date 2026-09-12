@@ -25,8 +25,36 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout portfolio
         uses: actions/checkout@v6
+        with:
+          path: portfolio
+
+      - name: Checkout Scrawler
+        uses: actions/checkout@v6
+        with:
+          repository: fabianhdz/scrawler
+          ref: main
+          path: scrawler
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: scrawler/package-lock.json
+
+      - name: Install Scrawler dependencies
+        working-directory: scrawler
+        run: npm ci
+
+      - name: Build Scrawler
+        working-directory: scrawler
+        run: npm run build
+
+      - name: Include Scrawler at /scrawler/
+        run: cp -R scrawler/dist portfolio/scrawler
 
       - name: Setup Pages
         uses: actions/configure-pages@v6
@@ -34,8 +62,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          # The whole repo root is the static site (no build step)
-          path: "."
+          path: portfolio
 
       - name: Deploy to GitHub Pages
         id: deployment
