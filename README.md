@@ -12,6 +12,14 @@ The main page includes my background, work experience, technical skills, and
 contact information. Each featured project also has its own page with more detail,
 including photos, diagrams, technical decisions, and links to the source code.
 
+The [projects catalog](https://fabianhz.me/projects/) includes all seven projects,
+organized into five disciplines, with reinforcement learning included under AI /
+Machine Learning. A compact category dropdown also finds related projects across
+sections, and a side rail provides category navigation and scroll progress.
+The four AI / Machine Learning additions link directly to GitHub; the
+three featured projects retain their detailed pages. The catalog remains readable
+without JavaScript.
+
 ## Running it locally
 
 Start a local server from the repository root:
@@ -21,17 +29,28 @@ python3 -m http.server 8000
 ```
 
 Then open [http://localhost:8000](http://localhost:8000) in a browser.
+The projects page is at [http://localhost:8000/projects/](http://localhost:8000/projects/).
 
 ## Project structure
 
 | Path | Contents |
 | --- | --- |
 | `index.html` | Main portfolio page |
-| `projects/` | Individual project pages |
+| `projects/index.html` | Projects catalog and category sections |
+| `projects/` | Catalog and individual featured-project pages |
 | `assets/projects/` | Project photos, diagrams, and other media |
 | `assets/resume.pdf` | Resume linked from the site |
-| `css/` | Site and project-page styles |
+| `css/` | Shared styles, project detail styles, and catalog styles |
 | `js/main.js` | Navigation and scroll interactions |
+| `js/projects.js` | Catalog filters and restoration of category sections |
+
+To add a catalog entry, put its card in one primary section in
+`projects/index.html`. Set `data-category` to that section's ID and `data-tags` to
+the space-separated category IDs that should match its filters. Visible technology
+tags are separate from these filter categories. Cards remain static HTML; the
+filter script moves the same cards into one results grid and restores them when
+**All** is selected. Update the initial project count for visitors without JavaScript
+when adding or removing entries.
 
 ## Deployment
 

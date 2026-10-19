@@ -64,6 +64,9 @@
 
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(onScroll).observe(document.body);
+    }
     updateProgress();
   }
 

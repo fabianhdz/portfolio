@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Fabian Hernandez Flores</title>
+  <meta name="description" content="Explore Fabian Hernandez Flores's projects in AI, machine learning, reinforcement learning, robotics, systems programming, web development, and embedded systems." />
+  <meta property="og:title" content="Projects | Fabian Hernandez Flores" />
+  <meta property="og:description" content="From learning agents and computer vision to autonomous driving, cryptography, and embedded hardware." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fabianhz.me/projects/" />
+  <link rel="canonical" href="https://fabianhz.me/projects/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232e0707'/><text x='16' y='22' font-size='18' font-family='monospace' fill='%23c9a227' text-anchor='middle'>F</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css?v=20260701-1" />
+  <link rel="stylesheet" href="../css/projects.css?v=20261018-2" />
+</head>
+<body class="catalog-page">
+  <a class="catalog-skip-link" href="#main">Skip to content</a>
+
+  <nav class="rail" aria-label="Project category navigation">
+    <ul class="rail__list">
+      <li>
+        <a href="#ai-machine-learning" class="rail__link" aria-label="AI / Machine Learning">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 6 12 1M6 6l5 12M18 7l-7 11"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="7" r="3"/><circle cx="11" cy="18" r="3"/></g></svg>
+          <span class="rail__tip">AI / Machine Learning</span>
+        </a>
+      </li>
+      <li>
+        <a href="#robotics" class="rail__link" aria-label="Robotics">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14v11H5zM12 8V4M9 19v2m6-2v2M2 11v5m20-5v5M9 15h6"/><path d="M9 11h.01M15 11h.01" stroke-width="3"/></g></svg>
+          <span class="rail__tip">Robotics</span>
+        </a>
+      </li>
+      <li>
+        <a href="#systems-programming" class="rail__link" aria-label="Systems Programming">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="rail__tip">Systems Programming</span>
+        </a>
+      </li>
+      <li>
+        <a href="#web-development" class="rail__link" aria-label="Web Development">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 9h18M6 7h.01M9 7h.01M7 13l-2 2 2 2m10-4 2 2-2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="rail__tip">Web Development</span>
+        </a>
+      </li>
+      <li>
+        <a href="#embedded-systems" class="rail__link" aria-label="Embedded Systems">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h12v12H6zM9 9h6v6H9zM9 3v3m6-3v3m-6 12v3m6-3v3M3 9h3m-3 6h3m12-6h3m-3 6h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="rail__tip">Embedded Systems</span>
+        </a>
+      </li>
+    </ul>
+    <span class="rail__fill" aria-hidden="true"></span>
+  </nav>
+
+  <header class="catalog-nav">
+    <div class="container catalog-nav__inner">
+      <a class="catalog-nav__back" href="../index.html#projects">&larr; Portfolio</a>
+      <a class="catalog-nav__name" href="../index.html">Fabian Hernandez Flores</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <header class="catalog-toolbar" id="explore">
+        <h1>Projects</h1>
+        <div class="catalog-filters" hidden>
+          <label class="catalog-sr-only" for="project-filter">Filter projects by discipline</label>
+          <select class="catalog-filter" id="project-filter" aria-controls="project-catalog filtered-results">
+            <option value="all">All projects</option>
+            <option value="ai-machine-learning">AI / Machine Learning</option>
+            <option value="robotics">Robotics</option>
+            <option value="systems-programming">Systems Programming</option>
+            <option value="web-development">Web Development</option>
+            <option value="embedded-systems">Embedded Systems</option>
+          </select>
+        </div>
+      </header>
+
+      <p class="catalog-sr-only" id="catalog-status" role="status" aria-live="polite" aria-atomic="true">7 projects</p>
+
+      <div id="project-catalog">
+        <section class="catalog-section" id="ai-machine-learning" aria-labelledby="ai-title">
+          <header class="section__head catalog-section__head">
+            <h2 class="section__title" id="ai-title">AI / Machine Learning</h2>
+          </header>
+          <div class="projects">
+            <a class="card card--project" href="https://github.com/fabianhdz/human-activity-recognition" target="_blank" rel="noopener noreferrer" data-category="ai-machine-learning" data-tags="ai-machine-learning">
+              <div class="card__media card__media--contain">
+                <img src="../assets/projects/human-activity/pose_estimate.png" alt="Soccer player shown with detected joints and a pose-estimation skeleton" width="2392" height="1638" />
+              </div>
+              <div class="card__top">
+                <span class="card__kicker">Computer vision</span>
+                <svg class="card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="card__title">Human Activity Recognition</h3>
+              <p class="card__desc">A PyTorch pipeline for classifying human activities with ResNet-50 and exploring human poses with an OpenPose-style network.</p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>PyTorch</li>
+                <li>ResNet-50</li>
+                <li>Pose estimation</li>
+              </ul>
+              <span class="card__destination">View on GitHub <span class="catalog-sr-only">(opens in a new tab)</span></span>
+            </a>
+
+            <a class="card card--project" href="https://github.com/fabianhdz/coffee-review-classification" target="_blank" rel="noopener noreferrer" data-category="ai-machine-learning" data-tags="ai-machine-learning">
+              <div class="card__media">
+                <img src="../assets/projects/coffee-review/classification.svg" alt="Illustration of a coffee cup and written reviews flowing into a text classifier" width="960" height="600" />
+              </div>
+              <div class="card__top">
+                <span class="card__kicker">Natural language processing</span>
+                <svg class="card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="card__title">Coffee Review Classification</h3>
+              <p class="card__desc">Predicting classes from coffee-review text with Multinomial Naive Bayes, alongside reusable preprocessing for text and review metadata.</p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>Naive Bayes</li>
+                <li>TF-IDF</li>
+                <li>NLP</li>
+              </ul>
+              <span class="card__destination">View on GitHub <span class="catalog-sr-only">(opens in a new tab)</span></span>
+            </a>
+
+            <a class="card card--project" href="https://github.com/Dianacastilleja/OpenAI_EscapeRoom/tree/training_model" target="_blank" rel="noopener noreferrer" data-category="ai-machine-learning" data-tags="ai-machine-learning reinforcement-learning">
+              <div class="card__media">
+                <img src="../assets/projects/openai_escaperoom/training-preview.jpg" alt="Unity training environment with parallel escape rooms, agents, doors, and pressure plates" width="1920" height="1080" loading="lazy" />
+              </div>
+              <div class="card__top">
+                <span class="card__kicker">Learning agents</span>
+                <svg class="card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="card__title">OpenAI Escape Room</h3>
+              <p class="card__desc">Training a Unity ML-Agents agent to navigate an escape room, activate a pressure plate, open a door, and reach the exit.</p>
+              <ul class="tags">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>ML-Agents</li>
+                <li>Reinforcement learning</li>
+              </ul>
+              <span class="card__destination">View on GitHub <span class="catalog-sr-only">(opens in a new tab)</span></span>
+            </a>
+
+            <a class="card card--project" href="https://github.com/fabianhdz/reinforcement-learning" target="_blank" rel="noopener noreferrer" data-category="ai-machine-learning" data-tags="ai-machine-learning reinforcement-learning">
+              <div class="card__media">
+                <img src="../assets/projects/reinforcement-learning/grid-world.svg" alt="Illustration of a learning agent following a path through a grid world toward a goal" width="960" height="600" loading="lazy" />
+              </div>
+              <div class="card__top">
+                <span class="card__kicker">Algorithms &amp; experiments</span>
+                <svg class="card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="card__title">Reinforcement Learning</h3>
+              <p class="card__desc">Exploring tabular methods, deep Q-learning, policy gradients, PPO, and decision transformers through practical learning experiments.</p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>PyTorch</li>
+                <li>Gymnasium</li>
+                <li>PPO</li>
+              </ul>
+              <span class="card__destination">View on GitHub <span class="catalog-sr-only">(opens in a new tab)</span></span>
+            </a>
+          </div>
+        </section>
+
+        <section class="catalog-section" id="robotics" aria-labelledby="robotics-title">
+          <header class="section__head catalog-section__head">
+            <h2 class="section__title" id="robotics-title">Robotics</h2>
+          </header>
+          <div class="projects">
+            <a class="card card--project" href="collaborative-driving.html" data-category="robotics" data-tags="robotics ai-machine-learning reinforcement-learning">
+              <div class="card__media">
+                <img src="../assets/projects/collaborative-driving/cyclist-in-path.png" alt="CARLA simulation showing adaptive CBF gains during a cyclist encounter" width="975" height="521" loading="lazy" />
+              </div>
+              <div class="card__top">
+                <span class="card__kicker">Autonomous driving research</span>
+                <svg class="card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="card__title">Safe Collaborative Driving</h3>
+              <p class="card__desc">
+                An RL-adaptive Control Barrier Function safety layer for V2Xverse that
+                reduces collisions while preserving route progress in CARLA.
+              </p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>PyTorch</li>
+                <li>CARLA</li>
+                <li>Safe RL</li>
+                <li>CBF</li>
+              </ul>
+            </a>
+          </div>
+        </section>
+
+        <section class="catalog-section" id="systems-programming" aria-labelledby="systems-title">
+          <header class="section__head catalog-section__head">
+            <h2 class="section__title" id="systems-title">Systems Programming</h2>
+          </header>
+          <div class="projects">
+            <a class="card card--project" href="qsfes.html" data-category="systems-programming" data-tags="systems-programming">
+              <div class="card__media">
+                <img src="../assets/projects/qsfes/key_generation.png" alt="QSFES desktop interface for ML-KEM key generation" width="1106" height="642" loading="lazy" />
+              </div>
+              <div class="card__top">
+                <span class="card__kicker">Post-quantum cryptography</span>
+                <svg class="card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="card__title">Quantum Secure File Encryption</h3>
+              <p class="card__desc">
+                A Python desktop application combining an ML-KEM-512 shared secret with
+                AES-256-GCM authenticated file encryption.
+              </p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>ML-KEM</li>
+                <li>AES-GCM</li>
+                <li>Tkinter</li>
+              </ul>
+            </a>
+          </div>
+        </section>
+
+        <section class="catalog-section" id="web-development" aria-labelledby="web-title">
+          <header class="section__head catalog-section__head">
+            <h2 class="section__title" id="web-title">Web Development</h2>
+          </header>
+          <div class="catalog-note">
+            <p>More projects will be added here.</p>
+          </div>
+        </section>
+
+        <section class="catalog-section" id="embedded-systems" aria-labelledby="embedded-title">
+          <header class="section__head catalog-section__head">
+            <h2 class="section__title" id="embedded-title">Embedded Systems</h2>
+          </header>
+          <div class="projects">
+            <a class="card card--project" href="sensapath.html" data-category="embedded-systems" data-tags="embedded-systems">
+              <div class="card__media">
+                <img src="../assets/projects/sensapath/wearable-prototype.jpg" alt="SensaPath ultrasonic sensor modules mounted around a wearable headpiece" width="524" height="328" loading="lazy" />
+              </div>
+              <div class="card__top">
+                <span class="card__kicker">Embedded system</span>
+                <svg class="card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="card__title">SensaPath</h3>
+              <p class="card__desc">
+                A 360-degree proximity awareness system using five ultrasonic sensors,
+                directional haptics, and spoken distance feedback.
+              </p>
+              <ul class="tags">
+                <li>C</li>
+                <li>RP2040</li>
+                <li>PCB design</li>
+                <li>Embedded systems</li>
+              </ul>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <section class="catalog-results" id="filtered-results" aria-labelledby="filtered-title" hidden>
+        <header class="catalog-results__head">
+          <h2 class="section__title" id="filtered-title">Filtered projects</h2>
+        </header>
+        <div class="projects" id="filtered-grid"></div>
+        <div class="catalog-note" id="catalog-empty" hidden>
+          <p>No projects in <span id="empty-category">this discipline</span> yet. Explore another discipline or browse the full collection.</p>
+          <button class="btn btn--ghost" type="button" id="reset-filter">View all projects &rarr;</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>&copy; <span id="year"></span> Fabian Hernandez Flores</span>
+      <a class="link-arrow" href="../index.html#contact">Get in touch &rarr;</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=20261018-2"></script>
+  <script src="../js/projects.js?v=20261018-2"></script>
+</body>
+</html>
