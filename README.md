@@ -12,13 +12,13 @@ The main page includes my background, work experience, technical skills, and
 contact information. Each featured project also has its own page with more detail,
 including photos, diagrams, technical decisions, and links to the source code.
 
-The [projects catalog](https://fabianhz.me/projects/) includes all seven projects,
+The [projects catalog](https://fabianhz.me/projects/) includes all nine projects,
 organized into five disciplines, with reinforcement learning included under AI /
 Machine Learning. A compact category dropdown also finds related projects across
 sections, and a side rail provides category navigation and scroll progress.
-The four AI / Machine Learning additions link directly to GitHub; the
-three featured projects retain their detailed pages. The catalog remains readable
-without JavaScript.
+The AI / Machine Learning projects, HelpingHand, and TorrentForge link directly
+to GitHub; the three featured projects retain their detailed pages. The catalog
+remains readable without JavaScript.
 
 ## Running it locally
 

@@ -35,6 +35,12 @@
         </a>
       </li>
       <li>
+        <a href="#embedded-systems" class="rail__link" aria-label="Embedded Systems">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h12v12H6zM9 9h6v6H9zM9 3v3m6-3v3m-6 12v3m6-3v3M3 9h3m-3 6h3m12-6h3m-3 6h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="rail__tip">Embedded Systems</span>
+        </a>
+      </li>
+      <li>
         <a href="#systems-programming" class="rail__link" aria-label="Systems Programming">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span class="rail__tip">Systems Programming</span>
@@ -44,12 +50,6 @@
         <a href="#web-development" class="rail__link" aria-label="Web Development">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 9h18M6 7h.01M9 7h.01M7 13l-2 2 2 2m10-4 2 2-2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span class="rail__tip">Web Development</span>
-        </a>
-      </li>
-      <li>
-        <a href="#embedded-systems" class="rail__link" aria-label="Embedded Systems">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h12v12H6zM9 9h6v6H9zM9 3v3m6-3v3m-6 12v3m6-3v3M3 9h3m-3 6h3m12-6h3m-3 6h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="rail__tip">Embedded Systems</span>
         </a>
       </li>
     </ul>
@@ -73,14 +73,14 @@
             <option value="all">All projects</option>
             <option value="ai-machine-learning">AI / Machine Learning</option>
             <option value="robotics">Robotics</option>
+            <option value="embedded-systems">Embedded Systems</option>
             <option value="systems-programming">Systems Programming</option>
             <option value="web-development">Web Development</option>
-            <option value="embedded-systems">Embedded Systems</option>
           </select>
         </div>
       </header>
 
-      <p class="catalog-sr-only" id="catalog-status" role="status" aria-live="polite" aria-atomic="true">7 projects</p>
+      <p class="catalog-sr-only" id="catalog-status" role="status" aria-live="polite" aria-atomic="true">9 projects</p>
 
       <div id="project-catalog">
         <section class="catalog-section" id="ai-machine-learning" aria-labelledby="ai-title">
@@ -195,6 +195,34 @@
           </div>
         </section>
 
+        <section class="catalog-section" id="embedded-systems" aria-labelledby="embedded-title">
+          <header class="section__head catalog-section__head">
+            <h2 class="section__title" id="embedded-title">Embedded Systems</h2>
+          </header>
+          <div class="projects">
+            <a class="card card--project" href="sensapath.html" data-category="embedded-systems" data-tags="embedded-systems">
+              <div class="card__media">
+                <img src="../assets/projects/sensapath/wearable-prototype.jpg" alt="SensaPath ultrasonic sensor modules mounted around a wearable headpiece" width="524" height="328" loading="lazy" />
+              </div>
+              <div class="card__top">
+                <span class="card__kicker">Embedded system</span>
+                <svg class="card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="card__title">SensaPath</h3>
+              <p class="card__desc">
+                A 360-degree proximity awareness system using five ultrasonic sensors,
+                directional haptics, and spoken distance feedback.
+              </p>
+              <ul class="tags">
+                <li>C</li>
+                <li>RP2040</li>
+                <li>PCB design</li>
+                <li>Embedded systems</li>
+              </ul>
+            </a>
+          </div>
+        </section>
+
         <section class="catalog-section" id="systems-programming" aria-labelledby="systems-title">
           <header class="section__head catalog-section__head">
             <h2 class="section__title" id="systems-title">Systems Programming</h2>
@@ -220,6 +248,25 @@
                 <li>Tkinter</li>
               </ul>
             </a>
+
+            <a class="card card--project" href="https://github.com/fabianhdz/TorrentForge" target="_blank" rel="noopener noreferrer" data-category="systems-programming" data-tags="systems-programming">
+              <div class="card__media">
+                <img src="../assets/projects/torrentforge/peer-network.svg" alt="Illustration of peers exchanging file pieces across a decentralized network" width="960" height="600" loading="lazy" />
+              </div>
+              <div class="card__top">
+                <span class="card__kicker">Peer-to-peer networking</span>
+                <svg class="card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="card__title">TorrentForge</h3>
+              <p class="card__desc">A C++23 BitTorrent client exploring torrent metadata, peer-to-peer networking, and piece-based file transfers.</p>
+              <ul class="tags">
+                <li>C++23</li>
+                <li>CMake</li>
+                <li>libcurl</li>
+                <li>OpenSSL</li>
+              </ul>
+              <span class="card__destination">View on GitHub <span class="catalog-sr-only">(opens in a new tab)</span></span>
+            </a>
           </div>
         </section>
 
@@ -227,35 +274,24 @@
           <header class="section__head catalog-section__head">
             <h2 class="section__title" id="web-title">Web Development</h2>
           </header>
-          <div class="catalog-note">
-            <p>More projects will be added here.</p>
-          </div>
-        </section>
-
-        <section class="catalog-section" id="embedded-systems" aria-labelledby="embedded-title">
-          <header class="section__head catalog-section__head">
-            <h2 class="section__title" id="embedded-title">Embedded Systems</h2>
-          </header>
           <div class="projects">
-            <a class="card card--project" href="sensapath.html" data-category="embedded-systems" data-tags="embedded-systems">
+            <a class="card card--project" href="https://github.com/fabianhdz/HelpingHand" target="_blank" rel="noopener noreferrer" data-category="web-development" data-tags="web-development">
               <div class="card__media">
-                <img src="../assets/projects/sensapath/wearable-prototype.jpg" alt="SensaPath ultrasonic sensor modules mounted around a wearable headpiece" width="524" height="328" loading="lazy" />
+                <img src="../assets/projects/helpinghand/service-marketplace.svg" alt="Illustration of service listings, a provider profile, and an appointment calendar" width="960" height="600" loading="lazy" />
               </div>
               <div class="card__top">
-                <span class="card__kicker">Embedded system</span>
-                <svg class="card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="card__kicker">Service marketplace</span>
+                <svg class="card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <h3 class="card__title">SensaPath</h3>
-              <p class="card__desc">
-                A 360-degree proximity awareness system using five ultrasonic sensors,
-                directional haptics, and spoken distance feedback.
-              </p>
+              <h3 class="card__title">HelpingHand</h3>
+              <p class="card__desc">A Django service marketplace connecting clients and providers through searchable listings, appointment booking, profiles, and ratings.</p>
               <ul class="tags">
-                <li>C</li>
-                <li>RP2040</li>
-                <li>PCB design</li>
-                <li>Embedded systems</li>
+                <li>Python</li>
+                <li>Django</li>
+                <li>Bootstrap</li>
+                <li>Authentication</li>
               </ul>
+              <span class="card__destination">View on GitHub <span class="catalog-sr-only">(opens in a new tab)</span></span>
             </a>
           </div>
         </section>
