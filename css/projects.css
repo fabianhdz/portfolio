@@ -107,6 +107,8 @@
 }
 .catalog-page .card__media--contain { background: #f5f3f0; }
 .catalog-page .card__media--contain img { object-fit: contain; }
+.catalog-page .card__media--screen { background: #000; }
+.catalog-page .card__media--screen img { object-fit: contain; }
 .card__destination {
   margin-top: 22px;
   color: var(--gold-soft);

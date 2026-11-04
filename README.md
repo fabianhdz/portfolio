@@ -12,12 +12,12 @@ The main page includes my background, work experience, technical skills, and
 contact information. Each featured project also has its own page with more detail,
 including photos, diagrams, technical decisions, and links to the source code.
 
-The [projects catalog](https://fabianhz.me/projects/) includes all eleven projects,
+The [projects catalog](https://fabianhz.me/projects/) includes all twelve projects,
 organized into five disciplines, with reinforcement learning included under AI /
 Machine Learning. A compact category dropdown also finds related projects across
 sections, and a side rail provides category navigation and scroll progress.
-The AI / Machine Learning projects, HelpingHand, and TorrentForge link directly
-to GitHub. LLM-Foraging links to its [arXiv paper](https://arxiv.org/abs/2605.01461),
+The AI / Machine Learning projects, STM32F407 Digital Oscilloscope, HelpingHand,
+and TorrentForge link directly to GitHub. LLM-Foraging links to its [arXiv paper](https://arxiv.org/abs/2605.01461),
 and Autonomous Drone opens a local MP4 flight demonstration. The three featured
 projects retain their detailed pages. The catalog remains readable without
 JavaScript.
