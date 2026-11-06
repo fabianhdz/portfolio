@@ -1,0 +1,17 @@
+# Repository files and local source media do not belong in the published site.
+/.git/
+/.github/
+/.agents/
+/.aws/
+/.codex/
+/.gitignore
+/source-media/
+/README.md
+/LICENSE
+/assets/README.txt
+
+# Unlinked originals, a temporary image, and the previous resume.
+/assets/projects/low-cost-drone/IMG_1445.MOV
+/assets/projects/low-cost-drone/drone.png~RF5bf0eb2.TMP
+/assets/projects/openai_escaperoom/2024-12-03 17-08-38.mkv
+/assets/resume1.pdf

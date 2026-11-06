@@ -72,3 +72,13 @@ gh workflow run deploy.yml --repo fabianhdz/portfolio --ref main
 ```
 
 Each portfolio deployment includes the latest Scrawler build.
+
+The workflow stages published files using `.github/pages-exclude.txt`. Unlinked
+original recordings, temporary files, the previous resume, and repository-only
+files stay out of the Pages artifact. Keep original media in `source-media/`
+(ignored by Git) and place compressed, browser-ready copies in `assets/projects/`.
+The drone demo uses H.264 MP4 at its original 720 × 1280 resolution and 30 fps,
+with its audio preserved and fast-start playback enabled.
+
+Each workflow attempt uses a separate artifact name so that rerunning a failed
+job does not conflict with artifacts from earlier attempts.

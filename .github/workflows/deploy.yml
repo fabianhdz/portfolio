@@ -59,11 +59,20 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v6
 
+      - name: Prepare published files
+        run: |
+          mkdir -p "$RUNNER_TEMP/portfolio-site"
+          rsync -a --exclude-from=portfolio/.github/pages-exclude.txt portfolio/ "$RUNNER_TEMP/portfolio-site/"
+          du -sh "$RUNNER_TEMP/portfolio-site"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: portfolio
+          name: github-pages-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/portfolio-site
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
